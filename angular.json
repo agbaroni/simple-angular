@@ -1,0 +1,31 @@
+{
+    "cli": {
+        "analytics": false
+    },
+    "projects": {
+        "application": {
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "index": "src/index.html",
+                        "main": "src/index.ts",
+                        "outputPath": "dist",
+                        "tsConfig": "tsconfig.json"
+                    }
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "application:build"
+                    }
+                }
+            },
+            "prefix": "application",
+            "projectType": "application",
+            "root": "",
+            "sourceRoot": "src"
+        }
+    },
+    "version": 1
+}
