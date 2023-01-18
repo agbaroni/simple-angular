@@ -1,27 +1,35 @@
 {
     "cli": {
-        "analytics": false
+        "analytics": false,
+        "packageManager": "npm"
     },
     "projects": {
-        "application": {
+        "app": {
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
+                        "assets": [
+                            "src/assets"
+                        ],
                         "index": "src/index.html",
-                        "main": "src/index.ts",
+                        "main": "src/main.ts",
                         "outputPath": "dist",
-                        "tsConfig": "tsconfig.json"
+                        "polyfills": [
+                            "zone.js"
+                        ],
+                        "sourceMap": true,
+                        "tsConfig": "tsconfig.app.json"
                     }
                 },
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "application:build"
+                        "browserTarget": "app:build"
                     }
                 }
             },
-            "prefix": "application",
+            "prefix": "app",
             "projectType": "application",
             "root": "",
             "sourceRoot": "src"
