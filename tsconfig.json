@@ -1,15 +1,23 @@
 {
     "compilerOptions": {
-        "alwaysStrict": true,
-        "baseUrl": ".",
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "charset": "utf8",
+        "downlevelIteration": true,
+        "exactOptionalPropertyTypes": true,
         "experimentalDecorators": true,
-        "module": "ES2020",
+        "listFiles": true,
+        "module": "ES2015",
         "moduleResolution": "node",
-        "paths": {},
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedIndexedAccess": true,
+        "outDir": "dist",
+        "removeComments": true,
+        "sourceMap": true,
         "strict": true,
-        "target": "ES2022"
-    },
-    "files": [
-        "src/index.ts"
-    ]
+        "target": "ES2020"
+    }
 }
